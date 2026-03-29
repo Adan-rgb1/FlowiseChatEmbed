@@ -18,7 +18,7 @@ export const Badge = (props: Props) => {
     mutations.forEach((mutation) => {
       mutation.removedNodes.forEach((removedNode) => {
         if ('id' in removedNode && liteBadge && removedNode.id == 'lite-badge') {
-          console.log("Powered by Autostack");
+          console.log('Powered by Autostack');
           props.botContainer?.append(liteBadge);
         }
       });
@@ -49,9 +49,8 @@ export const Badge = (props: Props) => {
           }}
         >
           {props.footer?.text ?? 'Powered by'}
-          
-        <span>&nbsp;{props.footer?.company ?? 'Autostack'}</span>
-          
+
+          <span>&nbsp;{props.footer?.company ?? 'Autostack'}</span>
         </span>
       </Show>
       <Show when={props.footer?.showFooter === false}>
